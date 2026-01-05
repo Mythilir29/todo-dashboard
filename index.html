@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive To-Do Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li><a href="#" onclick="switchTab('home')">Home</a></li>
+            <li><a href="#" onclick="switchTab('tasks')">Tasks</a></li>
+            <li><a href="#" onclick="switchTab('goals')">Goals</a></li>
+            <li><a href="#">Settings</a></li>
+        </ul>
+    </div>
+    <div class="main">
+        <h1>Welcome back, User 😊</h1>
+        <div id="home" class="tab active">
+            <p>Select a section from the sidebar to get started.</p>
+        </div>
+        <div id="tasks" class="tab">
+            <h2>Tasks</h2>
+            <div class="todo-container">
+                <input type="text" id="task-input" placeholder="Add a new task">
+                <button onclick="addItem('task')">Add</button>
+                <ul id="task-list"></ul>
+            </div>
+        </div>
+        <div id="goals" class="tab">
+            <h2>Goals</h2>
+            <div class="todo-container">
+                <input type="text" id="goal-input" placeholder="Add a new goal">
+                <button onclick="addItem('goal')">Add</button>
+                <ul id="goal-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
